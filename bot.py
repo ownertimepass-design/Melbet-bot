@@ -8,6 +8,14 @@
 
 import logging
 import os
+
+# Load .env file if it exists (local development)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    pass
+
 from telegram import (
     Update,
     InlineKeyboardButton,
